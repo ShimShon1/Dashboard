@@ -1,0 +1,260 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #cbd5e1;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+}
+
+
+.main-container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5 , 1fr);
+    gap:1rem 0;
+}
+
+
+.sidebar{
+    background-color:#6474cc;
+    grid-row:span 10;
+    grid-column: span 1;
+    color: white;
+    padding: 0.5rem;
+    padding-left: 1rem;
+}
+.header{
+    font-weight: 600;
+    background-color:#f1f5f9;
+    grid-column: span 4;
+    border-bottom: 2px solid grey;
+    box-shadow: 2px 2px 5px grey;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    padding: 1rem;
+    
+}
+
+.greeting{
+    grid-column: span 3;
+}
+
+.search-bar{
+    grid-column: span 3;
+}
+
+input{
+    width: 75%;
+    border-radius: 10px;
+    background-color: rgb(200, 200, 215);
+    border:none;
+    height: 80%;
+}
+
+.projects{
+    grid-column: span 3;
+    grid-row: span 5;
+    grid-template-columns:repeat(auto-fill,minmax(130px, 30%));
+    display: grid;
+    grid-template-rows: 7%;
+    grid-auto-rows: 1fr;
+    gap: 10px;
+    padding: 1rem;
+    padding-top: 0rem;
+}
+.card{
+    border: 1px solid rgba(128, 128, 128, 0.267);
+    box-shadow: 2px 2px 6px grey;
+    border-left: 3px solid orange;
+    background-color: #f1f5f9;
+    padding: 0.5rem;
+    border-radius: 7px;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 17% 1fr;
+}
+.card > p, .announce p+p, .trend-user span{
+    width: 70%;
+    font-size: 1rem;
+    color: rgb(77, 76, 76);
+   
+
+}
+
+.announce>div>p:first-child,.trend-user p{
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+.misc{
+    grid-row: span 4;
+    padding-right: 1rem;
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+.projects > h3{
+    grid-column-start: 1;
+    grid-column-end: -1;
+  
+}
+
+.icons img{
+    height: 22px;
+    margin: 5px;
+    
+}
+
+
+.icons{
+    justify-self: end;
+}
+
+
+.tabs{
+    margin-bottom: 15%;
+}
+.tabs, .logo,.extra-tabs{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-left: 3%;
+    
+    
+}
+
+
+.logo>div, .tabs>div, .extra-tabs>div, .header>div{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 3%;
+}
+
+
+
+img{
+    height: 2rem;
+}
+.logo img{
+    height: 4rem;
+}
+
+.logo{
+    font-size: 1.7rem;
+    margin-bottom: 10%;
+}
+
+
+.sidebar span{
+    margin-left: 5%;
+}
+
+.user-pic{
+    display: inline-block;
+    border-radius: 50%;
+    height: 3.5rem;
+    width: 3.5rem;
+
+    background-size: cover;
+    
+}
+
+.greeting{
+    margin-bottom: 0 !important;
+}
+.greeting .user-pic{
+    height: 5.5rem;
+    width: 5.5rem;
+}
+.greeting p{
+    display: inline-block;
+    font-size: 1.5rem;
+
+
+
+}
+
+.greeting span{
+    font-size: 1rem;
+}
+
+button{
+    padding: 0.7rem;
+    border-radius: 17px;
+    border: none;
+    background-color:#6474cc;
+    width: 20%;
+    color: white;
+    font-size: 1rem;
+    font-weight: 800;
+    margin: 1%;
+}
+
+.actions{
+    grid-column: span 2;
+    align-items: flex-end !important;
+}
+
+.user{
+    grid-column: span 1;
+    justify-content: space-around;
+}
+
+.announce{
+    border: 1px solid rgba(128, 128, 128, 0.267);
+    box-shadow: 2px 2px 6px grey;
+    background-color: #f1f5f9;
+    padding: 0.5rem;
+    padding-left: 2rem;
+    border-radius: 7px;
+}
+
+.trend-user{
+    display: flex;
+    gap: 15px;
+}
+
+
+.trending{
+    border: 1px solid rgba(128, 128, 128, 0.267);
+    box-shadow: 2px 2px 6px grey;
+    background-color: #f1f5f9;
+    padding: 0.5rem;
+    padding-left: 2rem;
+    border-radius: 7px;
+    margin-top: 5%;
+    flex-grow: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+
+.logo>div, .tabs>div, .extra-tabs>div, 
+.header>div,button, img, h1, h2, h3, div>p:first-child{
+    cursor: pointer;
+}
+
+@media screen and (max-width: 800px) {
+    html, body {
+      font-size: 10px !important;
+    }
+
+
+@media screen and (max-width: 600px) {
+        html, body {
+          font-size: 8px !important;
+        }
+
+   
+  }
+}
